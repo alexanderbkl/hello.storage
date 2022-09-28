@@ -1,0 +1,10 @@
+.filesContainer {
+
+    display: inline-flex;
+    position: relative;
+    width: 50vw;
+    height: 25vw;
+    background-color: white;
+    border-radius: 15px;
+
+}
