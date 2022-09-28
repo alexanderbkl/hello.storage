@@ -24,7 +24,8 @@ npm install
 ```
 Go to Constants.js located at the root of the project, and add your web3.storage API token.
 https://web3.storage/tokens/
-Start the project
+
+Finally, start the project!
 ```
 npm start
 ```
