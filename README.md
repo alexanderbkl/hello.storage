@@ -31,7 +31,11 @@ npm start
 ```
 
 We are making a startup (https://astronnaut.space) and we are making this MVP to get investments.
-All the changes that we need to implement, any contribution will be appreciated:
+
+All the changes that we need to implement, any contribution will be much appreciated as the only one developing this project is me:
+
 ❌Responsive frontend, adapt to PC and mobile.
+
 ❌Cross browser compatibility, especially IOS (main problem is blob files localy generated aren't downloaded.
+
 ❌React Native implementation (again, main problem are blob files).
