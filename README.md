@@ -32,7 +32,7 @@ npm start
 
 We are making a startup (https://astronnaut.space) and we are making this MVP to get investments.
 
-All the changes that we need to implement, any contribution will be much appreciated as the only one developing this project is me:
+All the changes that we need to implement, any contribution will be much appreciated as the only one developing this project is currently me:
 
 ❌Responsive frontend, adapt to PC and mobile.
 
