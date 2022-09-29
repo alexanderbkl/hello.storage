@@ -36,6 +36,6 @@ All the changes that we need to implement, any contribution will be much appreci
 
 ❌Responsive frontend, adapt to PC and mobile.
 
-❌Cross browser compatibility, especially IOS (main problem is blob files localy generated aren't downloaded.
+❌Cross browser compatibility, especially IOS (main problem is blob files localy generated aren't downloaded).
 
 ❌React Native implementation (again, main problem are blob files).
