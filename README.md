@@ -1,4 +1,4 @@
-# astronnaut.space
+# gox.earth
 A decentralized password, private data and files manager.
 This DAPP is being developed to bring privacy back to society.
 It is decentralized and encrypted end to end, which means all of your data can only be seen from your end.
@@ -7,16 +7,16 @@ It generates a private key, which can be used to authenticate yourself and autho
 This project was built in React, and is using web3.storage IPFS provider and w3name naming system.
 Feel free to make any proposals and helping us making the world a more private place! ❤️
 
-You can view the current launched app on https://astronnaut.space/beta2
+You can view the current launched app on https://gox.earth/beta2
 
 
 To start, you should clone the project
 ```
-git clone https://github.com/alexanderbkl/astronnaut.space.git
+git clone https://github.com/alexanderbkl/gox.earth.git
 ```
 Go to the downloaded folder
 ```
-cd astronnaut.space
+cd gox.earth
 ```
 Install all the necessary packages
 ```
@@ -30,7 +30,7 @@ Finally, start the project!
 npm start
 ```
 
-We are making a startup (https://astronnaut.space) and we are making this MVP to get investments.
+We are making a startup (https://gox.earth) and we are making this MVP to get investments.
 
 All the changes that we need to implement, any contribution will be much appreciated as the only one developing this project is currently me:
 
