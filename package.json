@@ -1,4 +1,5 @@
 {
+  /*
   "name": "ipns",
   "version": "0.1.0",
   "private": true,
@@ -15,10 +16,6 @@
     "bootstrap": "^5.2.0",
     "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
-    "crypto-js": "4.0.0",
-    "file-saver": "^2.0.5",
-    "firebase": "^9.9.4",
-    "ipfs": "^0.63.5",
     "js-file-download": "^0.4.12",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "react": "^18.2.0",
@@ -71,4 +68,5 @@
     "@types/react-dom": "^18.0.6",
     "typescript": "^4.7.4"
   }
+  */
 }
