@@ -1,5 +1,4 @@
 import './App.css';
-import Authentication from './components/Authentication';
 import React from 'react';
 //steps:
 /*
@@ -20,7 +19,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Authentication/>
 
       </header>
     </div>
