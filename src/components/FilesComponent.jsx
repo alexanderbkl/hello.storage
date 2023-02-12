@@ -19,8 +19,7 @@ import IconButton from '@mui/material/IconButton';
 import {Spinner} from "reactstrap";
 import CryptoJS from "crypto-js";
 import { convertWordArrayToUint8Array } from "../utils/AES";
-
-const axios = require("axios").default;
+import axios from "axios";
 
 
 var mounted = false;

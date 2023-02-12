@@ -95,16 +95,16 @@ const Authentication = () => {
 
 
 
-if (i <1) {
-  if (accountKey !== false && accountPassword !== false) {
-    window.location.replace("/files");
-    i++;
+  if (i < 1) {
+    if (accountKey !== false && accountPassword !== false) {
+      window.location.replace("/files");
+      i++;
 
-  } else if (accountKey !== false && accountPassword === false) {
-    values.open = true;
-    i++;
+    } else if (accountKey !== false && accountPassword === false) {
+      values.open = true;
+      i++;
+    }
   }
-}
 
 
 
@@ -163,7 +163,7 @@ if (i <1) {
             <Button onClick={handleDecrypt}>Decrypt</Button>
           </DialogActions>
         </Dialog>
-        <p style={{ marginBottom: "100px" }}>or<br/>Upload account:<br />
+        <p style={{ marginBottom: "100px" }}>or<br />Upload account:<br />
           <input
             type="file"
             onChange={(e) => setKeys(e.target.files[0].text())}
