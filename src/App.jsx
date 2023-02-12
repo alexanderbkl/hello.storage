@@ -1,5 +1,7 @@
 import './App.css';
 import React from 'react';
+import Authentication from './components/Authentication';
+
 //steps:
 /*
 1. Upload Key file
@@ -19,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Authentication/>
 
       </header>
     </div>
