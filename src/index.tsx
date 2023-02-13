@@ -12,7 +12,7 @@ import {
 import CreateAccount from './components/CreateAccount';
 import UploadData from './components/UploadData';
 import UploadPasswords from './components/UploadPasswords';
-import FilesComponent from './components/FilesComponent';
+import FilesComponent from './components/FilesComponent'; 
 import Files from './components/Files';
 import Passwords from './components/Passwords';
 import Data from './components/Data';

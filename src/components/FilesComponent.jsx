@@ -275,17 +275,17 @@ const FilesComponent = (props) => {
                     borderBottomLeftRadius: '15px',
                 }}>
                     <input type="file"
-                           ref={hiddenFileInput}
-                           onChange={(e) => setSelectedFile(e.target.files)}
-                           style={{ display: 'none' }}
+                        ref={hiddenFileInput}
+                        onChange={(e) => setSelectedFile(e.target.files)}
+                        style={{ display: 'none' }}
                     />
                     <img className="noselect pointer" style={{
                         width: '100%',
                         height: '100%',
                     }}
-                         alt="upload_button.png"
-                         src={upload_button}
-                         onClick={(e) => handleClick()}
+                    alt="upload_button.png"
+                        src={upload_button}
+                        onClick={(e) => handleClick()}
                     />
 
 

@@ -1,0 +1,11 @@
+.submit {
+    background-color: black;
+}
+.submit:hover {
+    background-color: azure;
+    color: black;
+}
+
+.dropdown-toggle {
+    background-color: black;
+}

@@ -2,6 +2,9 @@
   -ms-overflow-style: none;
 }
 
+html, body, #root, .App {
+  height: 100%;
+}
 ::-webkit-scrollbar {
   display: none;
 }

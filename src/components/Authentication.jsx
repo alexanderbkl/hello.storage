@@ -13,6 +13,9 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useNavigate } from 'react-router-dom';
+
+
 
 let i = 0;
 
@@ -43,6 +46,10 @@ const useSessionStorage = (storageKey, fallbackState) => {
 
 
 const Authentication = () => {
+
+  const navigate = useNavigate();
+
+
   const [accountPassword, setAccountPassword] = useSessionStorage('accountPassword', false);
   const [accountKey, setAccountKey] = useLocalStorage('accountKey', false);
 

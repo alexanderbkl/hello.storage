@@ -191,6 +191,24 @@ const CreateAccount = () => {
         if (typeof window.navigator.msSaveBlob !== 'undefined') {
             // IE workaround
             window.navigator.msSaveBlob(blob2, "priv.key");
+
+            let URL = window.URL;
+            let downloadUrl = URL.createObjectURL(blob2);
+            if ("priv.key") {
+                let a = document.createElement('a');
+                if (typeof a.download === 'undefined') {
+                    window.location.href = downloadUrl;
+                } else {
+                    a.href = downloadUrl;
+                    a.download = "priv.key";
+                    document.body.appendChild(a);
+                    a.click();
+                }
+            } else {
+                window.location.href = downloadUrl;
+            }
+            // cleanup
+            setTimeout(function () { URL.revokeObjectURL(downloadUrl); }, 100);
         } else {
             let URL = window.URL;
             let downloadUrl = URL.createObjectURL(blob2);
