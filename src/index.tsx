@@ -22,7 +22,7 @@ import Data from './components/Data';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   //<BrowserRouter basename="/beta2">
-    <BrowserRouter>
+    <BrowserRouter basename="/gox.earth">
       <Routes>
       <Route path="/" element={<App />} />
       <Route path="/createAccount" element={<CreateAccount />} />
