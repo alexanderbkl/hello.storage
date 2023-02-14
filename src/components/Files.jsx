@@ -1,4 +1,3 @@
-import Sidebar from './Sidebar';
 import React, { useState } from 'react';
 import FilesComponent from './FilesComponent';
 import FilesComponentRefactored from './FilesComponentRefactored';
@@ -80,7 +79,6 @@ const Files = () => {
 
     return (
         <div className="App">
-            <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
             <div className="h-100">
                     {/*<FilesComponent selectedKey={selectedKey} />*/}
                     <FilesComponentRefactored selectedKey={selectedKey} />

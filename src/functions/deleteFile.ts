@@ -6,9 +6,12 @@ import {default as axios} from "axios";
 import CryptoJS from "crypto-js";
 import {convertWordArrayToUint8Array} from "../utils/AES";
 import Constants from "../Constants.js";
+import { IPFSFile } from '../components/utils/types';
 
 
-export async function deleteFile(id, selectedKey) {
+export async function deleteFile(id: number, selectedKey: string | null): Promise<any> {
+    
+    var filesListTemp: IPFSFile[] = [];
 
     if (id !== 0 && selectedKey != null) {
 
@@ -34,13 +37,15 @@ export async function deleteFile(id, selectedKey) {
 
             } catch (e) {
                 console.log("Error: ", e);
+                console.log("return4")
+                return;
             }
 
 
             let controllerFetchDownload;
             controllerFetchDownload = new AbortController();
 
-            axios
+            await axios
                 .get(
                     "https://w3s.link"+revisiontwo.value,
                     {
@@ -61,6 +66,12 @@ export async function deleteFile(id, selectedKey) {
                     const fileUploadJsonParse = JSON.parse(dataString);
 
                     delete fileUploadJsonParse.files[id];
+
+                    for (const key in fileUploadJsonParse.files) {
+                        filesListTemp.push(fileUploadJsonParse.files[key]);
+                    }
+
+
 
 
                     const fileUploadJsonParseString = JSON.stringify(fileUploadJsonParse);
@@ -85,9 +96,6 @@ export async function deleteFile(id, selectedKey) {
 
                     await Name.publish(nextRevision, name.key);
 
-                    console.log("File successfuly deleted.");
-                    alert("File successfuly deleted.");
-                    window.location.reload();
 
                 })
                 .catch((err) => {
@@ -96,6 +104,8 @@ export async function deleteFile(id, selectedKey) {
                         alert("Error during downloading.");
                         console.log(err);
                     }
+                    console.log("return1")
+                    return;
                 });
 
 
@@ -108,6 +118,11 @@ export async function deleteFile(id, selectedKey) {
 
         } catch (e) {
             console.log("Error: ", e);
+            console.log("return2")
+            return filesListTemp;
         }
     }
+    console.log(filesListTemp);
+    return filesListTemp;
+
 }

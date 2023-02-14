@@ -98,9 +98,18 @@ const CreateAccount = () => {
 
 
 
+        //toggle alert class collapse to show alert for 3 seconds
+        alert("creating1")
+        document.getElementById("alert").classList.toggle("collapse");
+        setTimeout(function () {
+            document.getElementById("alert").classList.toggle("collapse");
+        }, 5000);
+        alert("creating2")
+
         const client = new Web3Storage({ token: Constants.web3storagetoken });
         const currentTimeInMilliseconds = new Date().getTime();
-        const name = await Name.create();
+
+        const name = await Name.create().catch(e => alert("There was an error creating the account: " + e));
 
 
         const nameBytesString = nameBytesToString(name.key.bytes);
@@ -191,36 +200,22 @@ const CreateAccount = () => {
         if (typeof window.navigator.msSaveBlob !== 'undefined') {
             // IE workaround
             window.navigator.msSaveBlob(blob2, "priv.key");
-
-            let URL = window.URL;
-            let downloadUrl = URL.createObjectURL(blob2);
-            if ("priv.key") {
-                let a = document.createElement('a');
-                if (typeof a.download === 'undefined') {
-                    window.location.href = downloadUrl;
-                } else {
-                    a.href = downloadUrl;
-                    a.download = "priv.key";
-                    document.body.appendChild(a);
-                    a.click();
-                }
-            } else {
-                window.location.href = downloadUrl;
-            }
-            // cleanup
-            setTimeout(function () { URL.revokeObjectURL(downloadUrl); }, 100);
         } else {
             let URL = window.URL;
             let downloadUrl = URL.createObjectURL(blob2);
             if ("priv.key") {
+                alert("true")
                 let a = document.createElement('a');
                 if (typeof a.download === 'undefined') {
+                    alert("undefined")
                     window.location.href = downloadUrl;
                 } else {
+                    alert("downloadUrl")
                     a.href = downloadUrl;
                     a.download = "priv.key";
                     document.body.appendChild(a);
                     a.click();
+                    
                 }
             } else {
                 window.location.href = downloadUrl;
@@ -239,7 +234,11 @@ const CreateAccount = () => {
     }
 
     return (
-        <div><Button variant="outlined" onClick={handleClickOpen}>
+        <div>
+            <div id="alert" class="alert alert-secondary collapse" role="alert">
+                Creating an account...
+            </div>
+            <Button variant="outlined" onClick={handleClickOpen}>
             CREATE ACCOUNT
         </Button>
             <Dialog open={values.open} onClose={handleClose}>

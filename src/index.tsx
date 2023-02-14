@@ -14,7 +14,8 @@ import UploadData from './components/UploadData';
 import UploadPasswords from './components/UploadPasswords';
 import FilesComponent from './components/FilesComponent'; 
 import Files from './components/Files';
-import Passwords from './components/Passwords';
+import PasswordsRefactored from './components/PasswordsRefactored';
+import NotesRefactored from './components/NotesRefactored';
 import Data from './components/Data';
 
 
@@ -29,7 +30,8 @@ root.render(
       <Route path="/uploadData" element={<UploadData />} />
       <Route path="/filesComponent" element={<FilesComponent />} />
       <Route path="/files" element={<Files />} />
-      <Route path="/passwords" element={<Passwords />} />
+      <Route path="/passwords" element={<PasswordsRefactored />} />
+      <Route path="/notes" element={<NotesRefactored />} />
       <Route path="/data" element={<Data />} />
     </Routes>
     </BrowserRouter>
