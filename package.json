@@ -28,8 +28,8 @@
   },
   "scripts": {
     "start": "vite --host --port=3000",
-    "build": "tsc && build",
-    "serve": "vite preview",
+    "build": "vite build --base=/gox.earth/",
+    "serve": "vite preview --host",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
