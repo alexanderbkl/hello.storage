@@ -49,7 +49,7 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
                 <a id="files" className="nav-link" aria-current="page" href='javascript:void(0);' onClick={() => navigate("/files")}>Files</a>
               </li>
               
-              <li className="nav-item dropdown">
+              <li style={{ zIndex:100, }} className="nav-item dropdown">
                 <a id="navbarDropdown" className="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Data
                 </a>

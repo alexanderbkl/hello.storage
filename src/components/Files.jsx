@@ -43,7 +43,6 @@ const Files = () => {
     if (accountKey !== false && accountPassword !== false) {
         if (typeof accountKey === "string") {
             try {
-                alert(accountPassword)
                 selectedKey = decrypt(accountKey, accountPassword);
             }
             catch {
