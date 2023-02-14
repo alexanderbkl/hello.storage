@@ -21,6 +21,8 @@ import {encrypt} from "../utils/AES";
 import CryptoJS from "crypto-js";
 import Constants from "../Constants.js";
 
+
+var mounted = false; 
 const useLocalStorage = (storageKey, fallbackState) => {
     const [value, setValue] = React.useState(
         JSON.parse(localStorage.getItem(storageKey)) ?? fallbackState
@@ -49,6 +51,10 @@ const useSessionStorage = (storageKey, fallbackState) => {
 const CreateAccount = () => {
     const [accountKey, setAccountKey] = useLocalStorage('accountKey', false);
     const [accountPassword, setAccountPassword] = useSessionStorage('accountPassword', false);
+
+
+
+
     const [values, setValues] = React.useState({
         open: false,
         password: "",
@@ -93,6 +99,17 @@ const CreateAccount = () => {
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
+    function logOut() {
+        if (!mounted) {
+            //remove accountKey from localStorage
+            localStorage.removeItem('accountKey');
+            //remove accountPassword from sessionStorage
+            sessionStorage.removeItem('accountPassword');
+            window.location.replace('/gox.earth/#');
+        }
+        mounted = true;
+    }
 
     async function createAccount() {
 
@@ -233,6 +250,8 @@ const CreateAccount = () => {
             <div id="alert" class="alert alert-secondary collapse" role="alert">
                 Creating an account...
             </div>
+            <a className="nav-link" href='javascript:void(0);' onClick={() => logOut()}>Delete credentials</a><br/>
+
             <Button variant="outlined" onClick={handleClickOpen}>
             CREATE ACCOUNT
         </Button>

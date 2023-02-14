@@ -100,18 +100,21 @@ const Authentication = () => {
     event.preventDefault();
   };
 
-
-
-  if (i < 1) {
+  React.useEffect(() => {
     if (accountKey !== false && accountPassword !== false) {
       window.location.replace("./#/files");
-      i++;
 
     } else if (accountKey !== false && accountPassword === false) {
-      values.open = true;
-      i++;
+      setValues({
+        ...values,
+        open: true,
+      });
     }
-  }
+  }, [accountKey, accountPassword])
+
+
+    
+  
 
 
 
