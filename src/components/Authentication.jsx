@@ -74,7 +74,7 @@ const Authentication = () => {
 
   const handleDecrypt = () => {
     setAccountPassword(values.password);
-    window.location.replace("/files");
+    window.location.replace("./files");
     setValues({
       ...values,
       open: !values.open,

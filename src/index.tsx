@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Routes,
   Route,
-  BrowserRouter,
+  HashRouter,
 } from 'react-router-dom';
 import CreateAccount from './components/CreateAccount';
 import UploadData from './components/UploadData';
@@ -22,7 +22,7 @@ import Data from './components/Data';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   //<BrowserRouter basename="/beta2">
-    <BrowserRouter basename="/gox.earth">
+    <HashRouter>
       <Routes>
       <Route path="/" element={<App />} />
       <Route path="/createAccount" element={<CreateAccount />} />
@@ -34,7 +34,7 @@ root.render(
       <Route path="/notes" element={<NotesRefactored />} />
       <Route path="/data" element={<Data />} />
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
