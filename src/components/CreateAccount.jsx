@@ -99,12 +99,10 @@ const CreateAccount = () => {
 
 
         //toggle alert class collapse to show alert for 3 seconds
-        alert("creating1")
         document.getElementById("alert").classList.toggle("collapse");
         setTimeout(function () {
             document.getElementById("alert").classList.toggle("collapse");
         }, 5000);
-        alert("creating2")
 
         const client = new Web3Storage({ token: Constants.web3storagetoken });
         const currentTimeInMilliseconds = new Date().getTime();
@@ -204,13 +202,10 @@ const CreateAccount = () => {
             let URL = window.URL;
             let downloadUrl = URL.createObjectURL(blob2);
             if ("priv.key") {
-                alert("true")
                 let a = document.createElement('a');
                 if (typeof a.download === 'undefined') {
-                    alert("undefined")
                     window.location.href = downloadUrl;
                 } else {
-                    alert("downloadUrl")
                     a.href = downloadUrl;
                     a.download = "priv.key";
                     document.body.appendChild(a);
