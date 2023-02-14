@@ -52,13 +52,13 @@ const Files = () => {
                         setAccountPassword(false);
                         alert("Incorrect password")
     
-                        window.location.replace("/");
+                        window.location.replace("/gox.earth");
                     } else if (accountPassword === false) {
                         setAccountPassword(false);
-                        window.location.replace("/");
+                        window.location.replace("/gox.earth");
                     } else {
                         setAccountPassword(false);
-                        window.location.replace("/");
+                        window.location.replace("/gox.earth");
                     }
                     i++;
                 }
@@ -72,7 +72,7 @@ const Files = () => {
     } else {
         setAccountPassword(false);
 
-        window.location.replace("/");
+        window.location.replace("/gox.earth");
     }
 
 

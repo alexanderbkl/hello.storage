@@ -228,7 +228,7 @@ const CreateAccount = () => {
 
         console.log("Successfuly created account:", accountKey);
         alert("Successfuly created account.");
-        window.location.replace('/files');
+        window.location.replace('./#/files');
 
 
     }
