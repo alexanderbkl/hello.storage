@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "vite --host --port=3000",
-    "build": "vite build --base=/gox.earth/",
+    "build": "vite build",
     "serve": "vite preview --host",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
