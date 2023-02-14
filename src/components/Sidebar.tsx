@@ -46,7 +46,7 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a id="files" className="nav-link" aria-current="page" href='javascript:void(0);' onClick={() => navigate("/files")}>Files</a>
+                <a id="files" className="nav-link" aria-current="page" href='javascript:void(0);' onClick={() => navigate("./files")}>Files</a>
               </li>
               
               <li className="nav-item dropdown">
@@ -54,8 +54,8 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
                   Data
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href='javascript:void(0);' onClick={() => navigate("/passwords", { state: { selectedKey: selectedKey } })}>Passwords</a></li>
-                  <li><a className="dropdown-item" href='javascript:void(0);' onClick={() => navigate("/notes", { state: { selectedKey: selectedKey } })}>Notes</a></li>
+                  <li><a className="dropdown-item" href='javascript:void(0);' onClick={() => navigate("./passwords", { state: { selectedKey: selectedKey } })}>Passwords</a></li>
+                  <li><a className="dropdown-item" href='javascript:void(0);' onClick={() => navigate("./notes", { state: { selectedKey: selectedKey } })}>Notes</a></li>
                 </ul>
               </li>
 
