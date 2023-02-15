@@ -35,42 +35,42 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
 
   return (
 
-    <>
 
-      <nav className="position-absolute w-100 navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="https://gox.earth"><img width={100} src="./assets/goxlogo.png" /> </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a id="files" className="nav-link" aria-current="page" href='javascript:void(0);' onClick={() => navigate("/files")}>Files</a>
-              </li>
-              
-              <li style={{ zIndex:100, }} className="nav-item dropdown">
-                <a id="navbarDropdown" className="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Data
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href='javascript:void(0);' onClick={() => navigate("/passwords", { state: { selectedKey: selectedKey } })}>Passwords</a></li>
-                  <li><a className="dropdown-item" href='javascript:void(0);' onClick={() => navigate("/notes", { state: { selectedKey: selectedKey } })}>Notes</a></li>
-                </ul>
-              </li>
 
-              <li className="nav-item">
-                <a className="nav-link" href='javascript:void(0);' onClick={() => logOut()}>Log out</a>
-              </li>
-            </ul>
-            <div className="d-flex">
-              <input onKeyDown={(e) => e.key === 'Enter' && setSearchState(searchText)} onChange={(e) => setSearchText(e.target.value)} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button onClick={(e) => setSearchState(searchText)} className="btn btn-outline-success" type="button">Search</button>
-            </div>
+    <nav style={{ zIndex:'100' }} className="z-100 position-absolute w-100 navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="https://gox.earth"><img width={100} src="./assets/goxlogo.png" /> </a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <span style={{ cursor: 'pointer' }} id="files" className="nav-link" aria-current="page" onClick={() => navigate("/files")}>Files</span>
+            </li>
+
+            <li style={{ zIndex: 100, }} className="nav-item dropdown">
+              <span style={{ cursor: 'pointer' }} id="navbarDropdown" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Data
+              </span>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><span style={{ cursor: 'pointer' }} className="dropdown-item" onClick={() => navigate("/passwords", { state: { selectedKey: selectedKey } })}>Passwords</span></li>
+                <li><span style={{ cursor: 'pointer' }} className="dropdown-item" onClick={() => navigate("/notes", { state: { selectedKey: selectedKey } })}>Notes</span></li>
+              </ul>
+            </li>
+
+            <li className="nav-item">
+              <span className="nav-link" onClick={() => logOut()}>Log out</span>
+            </li>
+          </ul>
+          <div className="d-flex">
+            <input onKeyDown={(e) => e.key === 'Enter' && setSearchState(searchText)} onChange={(e) => setSearchText(e.target.value)} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button onClick={(e) => setSearchState(searchText)} className="btn btn-outline-success" type="button">Search</button>
           </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
+
   );
 };
 
