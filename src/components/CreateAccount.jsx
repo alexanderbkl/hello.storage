@@ -246,13 +246,14 @@ const CreateAccount = () => {
     }
 
     return (
-        <div>
+        <div className=" d-flex border-1 flex-column justify-content-center align-items-center">
             <div id="alert" class="alert alert-secondary collapse" role="alert">
                 Creating an account...
             </div>
-            <a className="nav-link" href='javascript:void(0);' onClick={() => logOut()}>Delete credentials</a><br/>
-
-            <Button variant="outlined" onClick={handleClickOpen}>
+            <Button onClick={() => logOut()} className="m-3 bg-danger text-white" variant="outlined" onClick={handleClickOpen}>
+            DELETE CREDENTIALS
+        </Button>
+            <Button className="bg-success text-white p-2" variant="outlined" onClick={handleClickOpen}>
             CREATE ACCOUNT
         </Button>
             <Dialog open={values.open} onClose={handleClose}>

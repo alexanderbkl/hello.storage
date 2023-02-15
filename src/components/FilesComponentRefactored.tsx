@@ -208,6 +208,81 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
                 }
             });
     }
+    async function openFile(item: IPFSFile, selectedKey: string) {
+        let win: Window;
+
+        const name = await Name.from(stringToNameBytes(selectedKey));
+
+
+        if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+            win = window;
+        else win = window.open() || window;
+        let controllerFetchDownload;
+        controllerFetchDownload = new AbortController();
+
+        win.window.document.write(
+
+
+            "<html>  <head>    <style>      html,      body {        height: 100%;        width: 100%;      }      .container {        align-items: center;        display: flex;        justify-content: center;        height: 100%;        width: 100%;      }    </style>  </head>  <body style='background-color: #191919; overflow: hidden'>    <div class='container'>      <img src='https://gox.earth/images/logo.png' style='width: 250px' />      <div class='content'>        <p          id='textDownload'          style='color: white; font-family: Arial, Helvetica, sans-serif'        >          Download of " +
+            item.name +
+            " in progress...        </p>      </div>    </div>  </body></html>"
+        );
+
+        //se chiudo la finestra eseguo abort del download
+        win.window.addEventListener("beforeunload", (ev) => {
+            controllerFetchDownload = new AbortController();
+        });
+        await axios
+            .get(
+                "https://" + item.cid + ".ipfs.w3s.link",
+                {
+                    signal: controllerFetchDownload.signal,
+                    responseType: "text",
+                    onDownloadProgress: (event: ProgressEvent) => {
+                        let textDownload = win.document.getElementById("textDownload");
+                        if (textDownload) {
+                            textDownload.innerHTML =
+                                "Download of " + item.name +
+                                " is in progress..." +
+                                " "
+                                + formatBytes(event.loaded);
+                        }
+
+                    },
+                }
+            )
+            .then(async (text) => {
+                var bytes = CryptoJS.AES.decrypt(text.data, name.toString());
+                var typedArray = convertWordArrayToUint8Array(bytes);               // Convert: WordArray -> typed array
+
+                //scarico il file
+                var a = win.document.createElement("a");
+                let blob = new Blob([typedArray], {
+                    type: item.type,
+                });
+                let url = URL.createObjectURL(blob);
+                a.setAttribute("href", url);
+                //a.setAttribute("download", item.name);
+                win.document.body.append(a);
+                a.click();
+                win.location.href = url;
+                win.window.URL.revokeObjectURL(url);
+                a.remove();
+            })
+            .catch((err) => {
+                //errore durante il download
+                if (err.message !== "canceled") {
+                    alert("Error during downloading.");
+                    console.log(err);
+                    let textDownload = win.document.getElementById("textDownload");
+                    if (textDownload) {
+                        textDownload.innerHTML =
+                            "Error during downloading.";
+                    }
+
+                }
+            });
+    }
 
 
     function verifyFile(cid: string) {
@@ -294,7 +369,7 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
             {/*Pass state for nameTest from and to sidebar */}
             <Sidebar setSearchState={setSearchState} activeTab={"files"} selectedKey={selectedKey} />
             <div className="container-fluid h-100">
-                <div className="position-absolute d-flex my-4 start-50 end-50 flex-column align-items-center">
+                <div style={{top:'5%'}} className="position-absolute d-flex my-4 start-50 end-50 flex-column align-items-center">
                     <p hidden={spinnerVisible} color={"primary"}><b>{progressText}</b></p>
                     <Spinner hidden={spinnerVisible} color={"primary"} />
                     <div><b>{searchText ? searchText + ':' : ''}</b></div>
@@ -331,6 +406,7 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
                                                                 <DropdownButton className="moreOptionsDropdown" id="col-2 " title="">
                                                                     <Dropdown.Item onClick={() => handleDeleteClick(index, file.date, selectedKey)}>Delete</Dropdown.Item>
                                                                     <Dropdown.Item onClick={() => downloadFile(file, selectedKey)}>Download</Dropdown.Item>
+                                                                    <Dropdown.Item onClick={() => openFile(file, selectedKey)}>Open</Dropdown.Item>
                                                                 </DropdownButton>
                                                                 <IconButton className="col-1" onClick={() => verifyFile(file.cid)} color="primary" aria-label="add to shopping cart">
                                                                     <CheckIcon />
@@ -359,7 +435,7 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
 
 
                     <div className="navbar fixed-bottom mx-5">
-                        <p className="text-center" style={{ fontSize: '12px' }}>When uploading any data or files, these are automatically encrypted using your private key and stored across a fully decentralized network of nodes around the Earth. You and only you have control of your private key, and therefore you and only you can see or access your space, not even astronnaut.space has the possibility to see, interact, or access neither your space nor your private key.</p>
+                        <p className="text-center" style={{ fontSize: '12px' }}>When uploading any data or files, these are automatically encrypted using your private key and stored across a fully decentralized network of nodes around the Earth. You and only you have control of your private key, and therefore you and only you can see or access your space, not even Gox has the possibility to see, interact, or access neither your space nor your private key.</p>
                     </div>
                 </div>
 

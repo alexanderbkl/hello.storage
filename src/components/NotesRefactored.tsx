@@ -296,7 +296,7 @@ const NotesRefactored = () => {
         <div className="App">
             <Sidebar setSearchState={setSearchState} activeTab={"data"} selectedKey={selectedKey} />
             <div className="container-fluid h-100">
-            <div className="position-absolute d-flex my-4 start-50 end-50 flex-column align-items-center">
+            <div style={{top:'5%'}} className="position-absolute d-flex my-4 start-50 end-50 flex-column align-items-center">
                     <p hidden={spinnerVisible} color={"primary"}><b>{progressText}</b></p>
                     <Spinner hidden={spinnerVisible} color={"primary"} />
                     <div><b>{searchText ? searchText + ':' : ''}</b></div>

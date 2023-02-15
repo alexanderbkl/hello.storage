@@ -60,7 +60,7 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
             </li>
 
             <li className="nav-item">
-              <span className="nav-link" onClick={() => logOut()}>Log out</span>
+              <span style={{cursor: 'pointer'}} className="nav-link" onClick={() => logOut()}>Log out</span>
             </li>
           </ul>
           <div className="d-flex">

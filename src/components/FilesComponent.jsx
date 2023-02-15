@@ -323,6 +323,7 @@ const FilesComponent = (props) => {
                             </Col>
                             <Col sm={2}>
                                 <DropdownButton id="dropdown-basic-button" title="">
+                                    <Dropdown.Item onClick={() => deleteFile(item.date, selectedKey)}>Open</Dropdown.Item>
                                     <Dropdown.Item onClick={() => deleteFile(item.date, selectedKey)}>Delete</Dropdown.Item>
                                     <Dropdown.Item onClick={() => downloadFile(item, selectedKey)}>Download</Dropdown.Item>
                                 </DropdownButton>
