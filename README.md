@@ -40,4 +40,4 @@ All the changes that we need to implement, any contribution will be much appreci
 
 ❌React Native implementation (again, main problem are blob files).
 
-![](https://komarev.com/ghpvc/?username=gox.earth)
+![](https://komarev.com/ghpvc/?username=goxearth)
