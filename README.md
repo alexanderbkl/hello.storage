@@ -39,3 +39,5 @@ All the changes that we need to implement, any contribution will be much appreci
 ❌Cross browser compatibility, especially IOS (main problem is blob files localy generated aren't downloaded).
 
 ❌React Native implementation (again, main problem are blob files).
+
+![](https://komarev.com/ghpvc/?username=gox.earth)
