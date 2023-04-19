@@ -61,12 +61,7 @@ const CreateAccount = () => {
         showPassword: false,
     });
 
-    const handleClickOpen = () => {
-        setValues({
-            ...values,
-            open: true,
-        });
-    };
+;
 
     const handleClose = () => {
         setValues({
@@ -250,7 +245,7 @@ const CreateAccount = () => {
             <div id="alert" class="alert alert-secondary collapse" role="alert">
                 Creating an account...
             </div>
-            <Button onClick={() => logOut()} className="m-3 bg-danger text-white" variant="outlined" onClick={handleClickOpen}>
+            <Button onClick={() => logOut()} className="m-3 bg-danger text-white" variant="outlined">
             DELETE CREDENTIALS
         </Button>
             <Button className="bg-success text-white p-2" variant="outlined" onClick={handleClickOpen}>
