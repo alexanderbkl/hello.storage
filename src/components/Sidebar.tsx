@@ -18,7 +18,7 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
       localStorage.removeItem('accountKey');
       //remove accountPassword from sessionStorage
       sessionStorage.removeItem('accountPassword');
-      window.location.replace('/gox.earth/#');
+      window.location.replace('/joinhello.app/#');
     }
     mounted = true;
   }
@@ -37,9 +37,9 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
 
 
 
-    <nav style={{ zIndex:'100' }} className="z-100 position-absolute w-100 navbar navbar-expand-lg navbar-light bg-light">
+    <nav style={{ zIndex:'100', backgroundColor: 'black' }} className="z-100 position-absolute w-100 navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="https://gox.earth"><img width={100} src="./assets/goxlogo.png" /> </a>
+        <a className="navbar-brand" href="https://joinhello.app"><img width={30} className="mx-2" src="./assets/helloicon.png" /><img width={100} src="./assets/hellologo.png" /> </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

@@ -7,7 +7,7 @@ import svgrPlugin from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react(), viteTsconfigPaths(), svgrPlugin(), mkcert()],
-    base: '/gox.earth/',
+    base: '/joinhello.app/',
     build: {
         outDir: "build",
     }

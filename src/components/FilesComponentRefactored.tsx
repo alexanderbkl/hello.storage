@@ -148,7 +148,7 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
         win.window.document.write(
 
 
-            "<html>  <head>    <style>      html,      body {        height: 100%;        width: 100%;      }      .container {        align-items: center;        display: flex;        justify-content: center;        height: 100%;        width: 100%;      }    </style>  </head>  <body style='background-color: #191919; overflow: hidden'>    <div class='container'>      <img src='https://gox.earth/images/logo.png' style='width: 250px' />      <div class='content'>        <p          id='textDownload'          style='color: white; font-family: Arial, Helvetica, sans-serif'        >          Download of " +
+            "<html>  <head>    <style>      html,      body {        height: 100%;        width: 100%;      }      .container {        align-items: center;        display: flex;        justify-content: center;        height: 100%;        width: 100%;      }    </style>  </head>  <body style='background-color: #191919; overflow: hidden'>    <div class='container'>      <img src='https://joinhello.app/images/logo.png' style='width: 250px' />      <div class='content'>        <p          id='textDownload'          style='color: white; font-family: Arial, Helvetica, sans-serif'        >          Download of " +
             item.name +
             " in progress...        </p>      </div>    </div>  </body></html>"
         );
@@ -223,7 +223,7 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
         win.window.document.write(
 
 
-            "<html>  <head>    <style>      html,      body {        height: 100%;        width: 100%;      }      .container {        align-items: center;        display: flex;        justify-content: center;        height: 100%;        width: 100%;      }    </style>  </head>  <body style='background-color: #191919; overflow: hidden'>    <div class='container'>      <img src='https://gox.earth/images/logo.png' style='width: 250px' />      <div class='content'>        <p          id='textDownload'          style='color: white; font-family: Arial, Helvetica, sans-serif'        >          Download of " +
+            "<html>  <head>    <style>      html,      body {        height: 100%;        width: 100%;      }      .container {        align-items: center;        display: flex;        justify-content: center;        height: 100%;        width: 100%;      }    </style>  </head>  <body style='background-color: #191919; overflow: hidden'>    <div class='container'>      <img src='https://joinhello.app/images/logo.png' style='width: 250px' />      <div class='content'>        <p          id='textDownload'          style='color: white; font-family: Arial, Helvetica, sans-serif'        >          Download of " +
             item.name +
             " in progress...        </p>      </div>    </div>  </body></html>"
         );
@@ -435,7 +435,7 @@ const FilesComponentRefactored = (props: { selectedKey: string; }) => {
 
 
                     <div className="navbar fixed-bottom mx-5">
-                        <p className="text-center" style={{ fontSize: '12px' }}>When uploading any data or files, these are automatically encrypted using your private key and stored across a fully decentralized network of nodes around the Earth. You and only you have control of your private key, and therefore you and only you can see or access your space, not even Gox has the possibility to see, interact, or access neither your space nor your private key.</p>
+                        <p className="text-center" style={{ fontSize: '12px' }}>When uploading any data or files, these are automatically encrypted using your private key and stored across a fully decentralized network of nodes around the Earth. You and only you have control of your private key, and therefore you and only you can see or access your space, not even .hello has the possibility to see, interact, or access neither your space nor your private key.</p>
                     </div>
                 </div>
 

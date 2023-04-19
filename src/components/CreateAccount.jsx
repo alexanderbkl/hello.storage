@@ -106,7 +106,7 @@ const CreateAccount = () => {
             localStorage.removeItem('accountKey');
             //remove accountPassword from sessionStorage
             sessionStorage.removeItem('accountPassword');
-            window.location.replace('/gox.earth/#');
+            window.location.replace('/joinhello.app/#');
         }
         mounted = true;
     }
