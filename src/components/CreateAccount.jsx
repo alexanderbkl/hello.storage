@@ -61,7 +61,12 @@ const CreateAccount = () => {
         showPassword: false,
     });
 
-;
+    const handleClickOpen = () => {
+        setValues({
+            ...values,
+            open: true,
+        });
+    };
 
     const handleClose = () => {
         setValues({
