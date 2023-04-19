@@ -1,0 +1,5 @@
+const Constants = {
+    web3storagetoken: 'web3storagetoken',
+}
+
+export default Constants;
