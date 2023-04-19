@@ -7,7 +7,7 @@ It generates a private key, which can be used to authenticate yourself and autho
 This project was built in React, and is using web3.storage IPFS provider and w3name naming system.
 Feel free to make any proposals and helping us making the world a more private place! ❤️
 
-You can view the current launched app on https://hello.storage/beta
+You can view the current launched app on [https://hello.storage/beta](https://joinhello.app)
 
 
 To start, you should clone the project
