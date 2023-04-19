@@ -7,7 +7,7 @@ It generates a private key, which can be used to authenticate yourself and autho
 This project was built in React, and is using web3.storage IPFS provider and w3name naming system.
 Feel free to make any proposals and helping us making the world a more private place! ❤️
 
-You can view the current launched app on [https://hello.storage/beta](https://joinhello.app)
+You can view the current launched app on [https://hello.storage/beta](https://joinhello.app/prototype)
 
 
 To start, you should clone the project
@@ -30,7 +30,7 @@ Finally, start the project!
 npm start
 ```
 
-We are making a startup (https://joinhello.app) and we are creating this MVP for investments.
+We are making a startup [hello.storage](https://joinhello.app) and we are creating this MVP for investments.
 
 All the changes that we need to implement, any contribution will be much appreciated as the only one developing this project is currently me:
 
