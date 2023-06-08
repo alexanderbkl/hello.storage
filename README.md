@@ -30,7 +30,7 @@ Finally, start the project!
 npm start
 ```
 
-We are making a startup [hello.storage](https://joinhello.app) and we are creating this MVP for investments.
+We are fundraising for our startup [hello.storage](https://joinhello.app) and this is just a small glimpse that I built in a weekend to get an idea for investments.
 
 All the changes that we need to implement, any contribution will be much appreciated as the only one developing this project is currently me:
 
