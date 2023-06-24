@@ -51,13 +51,13 @@ const Files = () => {
                         setAccountPassword(false);
                         alert("Incorrect password")
     
-                        window.location.replace("/joinhello.app/#");
+                        window.location.replace("/#");
                     } else if (accountPassword === false) {
                         setAccountPassword(false);
-                        window.location.replace("/joinhello.app/#");
+                        window.location.replace("/#");
                     } else {
                         setAccountPassword(false);
-                        window.location.replace("/joinhello.app/#");
+                        window.location.replace("/#");
                     }
                     i++;
                 }
@@ -70,7 +70,7 @@ const Files = () => {
     } else {
         setAccountPassword(false);
 
-        window.location.replace("/joinhello.app/#");
+        window.location.replace("/#");
     }
 
 

@@ -18,7 +18,7 @@ const Sidebar = ({ setSearchState, activeTab, selectedKey }: { setSearchState: a
       localStorage.removeItem('accountKey');
       //remove accountPassword from sessionStorage
       sessionStorage.removeItem('accountPassword');
-      window.location.replace('/joinhello.app/#');
+      window.location.replace('/#');
     }
     mounted = true;
   }
